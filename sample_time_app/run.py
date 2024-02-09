@@ -1,6 +1,10 @@
+from datetime import datetime
 from flask import Flask
 app = Flask(__name__)
 
+@app.route("/time")
+def return_time():
+    return str(datetime.now())
 
 @app.route('/')
 def hello_world():
